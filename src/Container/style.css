@@ -1,0 +1,7 @@
+.container {
+    margin: 0px auto;
+    background-image: url("../pictures/money.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+}
