@@ -1,4 +1,4 @@
-#Currency-Converter-React what's it?
+# Currency-Converter-React what's it?
 
 ## Currency Converter is used to quickly convert currencies against Polish Zloty.
 User can choose one of three currency.
