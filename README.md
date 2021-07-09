@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+#Currency-Converter-React what's it?
+
+## Currency Converter is used to quickly convert currencies against Polish Zloty.
+User can choose one of three currency.
+
+- Euro
+- United States Dollar
+- Swiss Frank
+- Link to the currency-converter: 
+
+## How it's working?
+5 elements are marked in the photo below:
+
+This field is for entering the amount of cash you want to convert in Polish Zloty
+This field is for selecting the currency in which you want to result.
+This button converts the value from Polish Zloty to the selected currency.
+This button resets all fields.
+This is field for result, when you click button Przelicz ( number 3 ) the result will appear in the field.
+
+![Description picture](https://github.com/Przemek-Przybylak/Currency---Converter/blob/main/pictures/descriptionPicture.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
