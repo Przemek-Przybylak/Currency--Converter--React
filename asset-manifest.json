@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Currency--Converter--React/static/css/main.c10d1877.chunk.css",
+    "main.js": "/Currency--Converter--React/static/js/main.ec1b788f.chunk.js",
+    "main.js.map": "/Currency--Converter--React/static/js/main.ec1b788f.chunk.js.map",
+    "runtime-main.js": "/Currency--Converter--React/static/js/runtime-main.bcda64e0.js",
+    "runtime-main.js.map": "/Currency--Converter--React/static/js/runtime-main.bcda64e0.js.map",
+    "static/js/2.2fb9f0b6.chunk.js": "/Currency--Converter--React/static/js/2.2fb9f0b6.chunk.js",
+    "static/js/2.2fb9f0b6.chunk.js.map": "/Currency--Converter--React/static/js/2.2fb9f0b6.chunk.js.map",
+    "static/js/3.ff66c130.chunk.js": "/Currency--Converter--React/static/js/3.ff66c130.chunk.js",
+    "static/js/3.ff66c130.chunk.js.map": "/Currency--Converter--React/static/js/3.ff66c130.chunk.js.map",
+    "index.html": "/Currency--Converter--React/index.html",
+    "static/css/main.c10d1877.chunk.css.map": "/Currency--Converter--React/static/css/main.c10d1877.chunk.css.map",
+    "static/js/2.2fb9f0b6.chunk.js.LICENSE.txt": "/Currency--Converter--React/static/js/2.2fb9f0b6.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/Currency--Converter--React/static/media/money.20cf50c5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bcda64e0.js",
+    "static/js/2.2fb9f0b6.chunk.js",
+    "static/css/main.c10d1877.chunk.css",
+    "static/js/main.ec1b788f.chunk.js"
+  ]
+}
