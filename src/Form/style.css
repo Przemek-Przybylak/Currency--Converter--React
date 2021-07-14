@@ -27,10 +27,17 @@
 
 .form__input {
     width: 100%;
+    max-width: 300px;
     padding: 3px;
     border: 1px solid #ccc;
     text-align: center;
     font-weight: 700;
+}
+
+@media (max-width:836px){
+    .form__input {
+    max-width: none;
+    }
 }
 
 .form__input:invalid {
