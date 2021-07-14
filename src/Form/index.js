@@ -7,14 +7,14 @@ export const Form = ({ getResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
-    const onSubmit = (event) => {
+    const onClicklculate = (event) => {
         event.preventDefault();
         getResult(currency, amount);
     }
 
     return (
         <form className="form"
-            onSubmit={onSubmit}
+            
         >
             <fieldset className="form__container">
                 <legend className="form__description">Kalkulator walutowy</legend>
@@ -28,6 +28,7 @@ export const Form = ({ getResult, result }) => {
                             className="form__input "
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
+                            
                         />
                     </label>
                 </p>
@@ -49,7 +50,7 @@ export const Form = ({ getResult, result }) => {
                 </label>
 
             </fieldset>
-            <button className="form__button">Przelicz</button>
+            <button className="form__button" onClick={onClicklculate} >Przelicz</button>
             <button className="form__button">Wyczyść formularz</button>
             <Section result={result} />
         </form>
