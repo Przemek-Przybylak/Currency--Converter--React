@@ -7,7 +7,7 @@ export const Form = ({ getResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
-    const onClicklculate = (event) => {
+    const onClick = (event) => {
         event.preventDefault();
         getResult(currency, amount);
     }
@@ -50,7 +50,7 @@ export const Form = ({ getResult, result }) => {
                 </label>
 
             </fieldset>
-            <button className="form__button" onClick={onClicklculate} >Przelicz</button>
+            <button className="form__button" onClick={onClick} >Przelicz</button>
             <button className="form__button">Wyczyść formularz</button>
             <Section result={result} />
         </form>
