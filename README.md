@@ -3,6 +3,8 @@
 ## Currency Converter is used to quickly convert currencies against Polish Zloty.
 User can choose one of three currency.
 
+link: https://przemek-przybylak.github.io/Currency--Converter--React/
+
 - Euro
 - United States Dollar
 - Swiss Frank
