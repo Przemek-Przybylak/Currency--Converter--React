@@ -1,17 +1,29 @@
 .form {
     margin: 20px auto;
-    width: 60%;
+    /* width: 60%; */
     max-width: 600px;
 }
 
 .form__container {
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
     border: 1px solid #ccc;
+}
+
+.form__item {
+    display: flex;
+    justify-content: center;
+}
+
+.form__fieldset {
+    padding: 15px;
+    border: none;
     width: 100%;
     margin-bottom: 20px;
 }
 
 .form__description {
+    margin: auto;
     background-color: rgb(4, 164, 228);
     color: white;
     font-weight: 700;
@@ -20,7 +32,7 @@
 .form__ItemDescription {
     display: inline-block;
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
     padding: 3px;
     margin: 5px;
 }

@@ -24,42 +24,44 @@ export const Form = ({ getResult, result }) => {
         <form className="form"
             onSubmit={onSubmit}
         >
-            <fieldset className="form__container">
-                <legend className="form__description">Kalkulator walutowy</legend>
-                <p className="forn__paragraph">
+            <div className="form__container">
+                <fieldset className="form__fieldset">
+                    <legend className="form__description">Kalkulator walutowy</legend>
+                    <p className="forn__paragraph">
+                        <label className="form__item">
+                            <span className="form__ItemDescription">Podaj kwotę w PLN: </span>
+                            <input
+                                type="number"
+                                min="1" step="1"
+                                placeholder="Wpisz kwotę..."
+                                className="form__input "
+                                value={amount}
+                                onChange={({ target }) => setAmount(target.value)}
+                            />
+                        </label>
+                    </p>
                     <label className="form__item">
-                        <span className="form__ItemDescription">Podaj kwotę w PLN: </span>
-                        <input
-                            type="number"
-                            min="1" step="1"
-                            placeholder="Wpisz kwotę..."
-                            className="form__input "
-                            value={amount}
-                            onChange={({ target }) => setAmount(target.value)}
-                        />
+                        <span className="form__ItemDescription">Wybierz walutę</span>
+                        <select
+                            value={currency}
+                            onChange={({ target }) => setCurrency(target.value)}
+                            className="form__input"
+                        >
+                            {currencies.map((currency => (
+                                <option
+                                    key={currency.name}
+                                    value={currency.name}
+                                >
+                                    {currency.name}
+                                </option>
+                            )))}
+                        </select>
                     </label>
-                </p>
-                <label className="form__item">
-                    <span className="form__ItemDescription">Wybierz walutę</span>
-                    <select
-                        value={currency}
-                        onChange={({ target }) => setCurrency(target.value)}
-                        className="form__input"
-                    >
-                        {currencies.map((currency => (
-                            <option
-                                key={currency.name}
-                                value={currency.name}
-                            >
-                                {currency.name}
-                            </option>
-                        )))}
-                    </select>
-                </label>
-            </fieldset>
-            <button className="form__button" onClick={onClickGetResult} >Przelicz</button>
-            <button className="form__button" onClick={onClickClear} >Wyczyść formularz</button>
-            <Section result={result} />
+                </fieldset>
+                <button className="form__button" onClick={onClickGetResult} >Przelicz</button>
+                <button className="form__button" onClick={onClickClear} >Wyczyść formularz</button>
+                <Section result={result} />
+            </div>
         </form>
     )
 }
