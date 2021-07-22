@@ -39,7 +39,8 @@ export const Form = ({ getResult, result }) => {
                         />
                     </label>
                 </p>
-                <label className="form__item"> <span className="form__ItemDescription">Wybierz walutę</span>
+                <label className="form__item">
+                    <span className="form__ItemDescription">Wybierz walutę</span>
                     <select
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
