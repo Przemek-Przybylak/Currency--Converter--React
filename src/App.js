@@ -7,6 +7,9 @@ function App() {
   const [result, setResult] = useState();
 
   const getResult = (currency, amount) => {
+    if (amount <= 0)
+    return "";
+    
     const rate = currencies.find(
       ({ name }) => name === currency).rate
 
