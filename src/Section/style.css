@@ -8,3 +8,8 @@
     font-weight: 700;
     padding: 5px;
 }
+
+.section__body {
+    padding: 0;
+    margin: 0;
+}
