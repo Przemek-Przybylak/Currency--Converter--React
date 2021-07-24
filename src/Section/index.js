@@ -2,7 +2,8 @@ import "./style.css";
 
 export const Section = ({ result }) => (
     <section className="section">
-        <span className="section__description">Wynik to: </span>
+       <p className="section__body">
+       <span className="section__description">Wynik to: </span>
         <strong className="section__result">
             {result !== undefined && (
                 <>
@@ -11,6 +12,7 @@ export const Section = ({ result }) => (
                 </>
             )}
         </strong>
+       </p>
     </section>
 )
     ;
