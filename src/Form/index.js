@@ -7,13 +7,10 @@ export const Form = ({ getResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
-    const onGetResultButtonClick = () => {
-        getResult(currency, amount);
-    }
-
-    const onSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
-    }
+        getResult(currency, amount);
+    };
 
     /*const onClickClear = () => {
         setCurrency(currency => currency = currencies[0].name)
@@ -22,7 +19,6 @@ export const Form = ({ getResult, result }) => {
 
     return (
         <form className="form"
-            onSubmit={onSubmit}
         >
             <div className="form__container">
                 <fieldset className="form__fieldset">
@@ -58,7 +54,7 @@ export const Form = ({ getResult, result }) => {
                         </select>
                     </label>
                 </fieldset>
-                <button className="form__button" onClick={onGetResultButtonClick} >Przelicz</button>
+                <button className="form__button" onClick={onFormSubmit}>Przelicz</button>
                 <button type="reset" className="form__button" /*onClick={onClickClear}*/ >Wyczyść formularz</button>
                 <Section result={result} />
             </div>
