@@ -3,7 +3,23 @@ import { useState } from "react";
 import { currencies } from "./currencies";
 import { Section } from "../Section";
 
-export const Form = ({ getResult, result }) => {
+export const Form = () => {
+    const [result, setResult] = useState("");
+
+    const getResult = (currency, amount) => {
+        if (amount <= 0)
+            return "";
+
+        const rate = currencies.find(
+            ({ name }) => name === currency).rate
+
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: amount / rate,
+            currency
+        })
+    };
+
     const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
@@ -14,6 +30,7 @@ export const Form = ({ getResult, result }) => {
 
     const onClickClear = () => {
         setAmount("");
+        setResult("");
     };
 
     return (
@@ -58,6 +75,6 @@ export const Form = ({ getResult, result }) => {
                 <Section result={result} />
             </div>
         </form>
-    )
+    );
 };
 
