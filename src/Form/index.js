@@ -12,10 +12,9 @@ export const Form = ({ getResult, result }) => {
         getResult(currency, amount);
     };
 
-    /*const onClickClear = () => {
-        setCurrency(currency => currency = currencies[0].name)
-        setAmount(amount => amount = (""))
-    }*/
+    const onClickClear = () => {
+        setAmount("");
+    };
 
     return (
         <form className="form"
@@ -50,15 +49,15 @@ export const Form = ({ getResult, result }) => {
                                 >
                                     {currency.name}
                                 </option>
-                            )))}
+                            )))};
                         </select>
                     </label>
                 </fieldset>
                 <button className="form__button" onClick={onFormSubmit}>Przelicz</button>
-                <button type="reset" className="form__button" /*onClick={onClickClear}*/ >Wyczyść formularz</button>
+                <button type="reset" className="form__button" onClick={onClickClear} >Wyczyść formularz</button>
                 <Section result={result} />
             </div>
         </form>
     )
-}
+};
 
