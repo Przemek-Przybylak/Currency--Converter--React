@@ -8,9 +8,9 @@ export const Section = ({ result }) => (
         {result && (
           <>
             {result.sourceAmount
-              ? ` ${result.sourceAmount.toFixed(2)} PLN =`
+              ? ` ${result.sourceAmount.toFixed(2)} PLN = `
               : ""}
-            {result.targetAmount ? result.targetAmount.toFixed(2) : ""}
+            {result.targetAmount ? `${result.targetAmount.toFixed(2)} ` : ""}
             {result.sourceAmount ? result.currency : ""}
           </>
         )}
