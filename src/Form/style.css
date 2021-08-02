@@ -45,9 +45,9 @@
     font-weight: 700;
 }
 
-@media (max-width:836px){
+@media (max-width:836px) {
     .form__input {
-    max-width: none;
+        max-width: none;
     }
 }
 
