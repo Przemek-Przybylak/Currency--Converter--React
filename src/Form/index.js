@@ -2,9 +2,12 @@ import "./style.css";
 import { useState } from "react";
 import { currencies } from "./currencies";
 import { Section } from "../Section";
+import { Time } from "../Time";
 
 export const Form = () => {
     const [result, setResult] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].name);
+    const [amount, setAmount] = useState("");
 
     const getResult = (currency, amount) => {
         if (amount <= 0)
@@ -20,9 +23,6 @@ export const Form = () => {
         })
     };
 
-    const [currency, setCurrency] = useState(currencies[0].name);
-    const [amount, setAmount] = useState("");
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         getResult(currency, amount);
@@ -34,9 +34,9 @@ export const Form = () => {
     };
 
     return (
-        <form className="form"
-        >
+        <form className="form">
             <div className="form__container">
+                <Time />
                 <fieldset className="form__fieldset">
                     <legend className="form__description">Kalkulator walutowy</legend>
                     <p className="forn__paragraph">
