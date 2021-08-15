@@ -16,10 +16,10 @@ export const Time = () => {
 
     return (
         <StyledDiv>
-            <StyledParagraph>Dzisiaj jest 
+            <StyledParagraph>Dzisiaj jest{" "} 
                 {actualTime.toLocaleString("pl", { 
                 weekday: "long", 
-                day: "numeric", 
+                day: "numeric",  
                 month: "numeric", 
                 year: "numeric", 
                 hour: "numeric", 
