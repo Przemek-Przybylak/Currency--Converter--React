@@ -1,12 +1,6 @@
 .form__clock{
-    margin: 0px;
-    margin-bottom: 10px;
-    color: rgb(172, 172, 172);
-    font-family: 'Roboto Mono', monospace;
-    font-size: 10px;
+
 }
 .form__clockContainer{
-    margin: 0px;
-    display: flex;
-    justify-content: flex-end;
+
 }
