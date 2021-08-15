@@ -1,8 +1,8 @@
-import "./style.css";
 import { useState } from "react";
 import { currencies } from "./currencies";
 import { Section } from "../Section";
 import { Time } from "../Time";
+import { StyledForm, StyledDiv, StyledLabel, StyledFieldset, StyledLegend, StyledSpan, StyledInput, StyledButton } from "./styled";
 
 export const Form = () => {
     const [result, setResult] = useState("");
@@ -34,15 +34,15 @@ export const Form = () => {
     };
 
     return (
-        <form className="form">
-            <div className="form__container">
+        <StyledForm>
+            <StyledDiv>
                 <Time />
-                <fieldset className="form__fieldset">
-                    <legend className="form__description">Kalkulator walutowy</legend>
-                    <p className="forn__paragraph">
-                        <label className="form__item">
-                            <span className="form__ItemDescription">Podaj kwotę w PLN: </span>
-                            <input
+                <StyledFieldset>
+                    <StyledLegend>Kalkulator walutowy</StyledLegend>
+                    <p>
+                        <StyledLabel>
+                            <StyledSpan>Podaj kwotę w PLN: </StyledSpan>
+                            <StyledInput
                                 type="number"
                                 min="1" step="1"
                                 placeholder="Wpisz kwotę..."
@@ -50,14 +50,13 @@ export const Form = () => {
                                 value={amount}
                                 onChange={({ target }) => setAmount(target.value)}
                             />
-                        </label>
+                        </StyledLabel>
                     </p>
-                    <label className="form__item">
-                        <span className="form__ItemDescription">Wybierz walutę</span>
-                        <select
+                    <StyledLabel>
+                        <StyledSpan>Wybierz walutę</StyledSpan>
+                        <StyledInput as="select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
-                            className="form__input"
                         >
                             {currencies.map((currency => (
                                 <option
@@ -67,14 +66,14 @@ export const Form = () => {
                                     {currency.name}
                                 </option>
                             )))};
-                        </select>
-                    </label>
-                </fieldset>
-                <button className="form__button" onClick={onFormSubmit}>Przelicz</button>
-                <button type="reset" className="form__button" onClick={onClickClear} >Wyczyść formularz</button>
+                        </StyledInput>
+                    </StyledLabel>
+                </StyledFieldset>
+                <StyledButton onClick={onFormSubmit}>Przelicz</StyledButton>
+                <StyledButton type="reset" onClick={onClickClear} >Wyczyść formularz</StyledButton>
                 <Section result={result} />
-            </div>
-        </form>
+            </StyledDiv>
+        </StyledForm>
     );
 };
 
