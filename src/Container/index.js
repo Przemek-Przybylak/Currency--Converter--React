@@ -1,7 +1,8 @@
-import "./style.css";
+import { StyledContainer } from "./styled";
+
 export const Container = (props) => (
-    <main className="container">
+    <StyledContainer>
         {props.children}
-    </main>
+    </StyledContainer>
 );
 
