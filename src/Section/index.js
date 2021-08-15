@@ -1,10 +1,10 @@
-import "./style.css";
+import { StyledSection, StyledParagraph } from "./styled";
 
 export const Section = ({ result }) => (
-  <section className="section">
-    <p className="section__body">
-      <span className="section__description">Wynik to: </span>
-      <strong className="section__result">
+  <StyledSection>
+    <StyledParagraph>
+      <span>Wynik to: </span>
+      <strong>
         {result && (
           <>
             {result.sourceAmount
@@ -15,7 +15,7 @@ export const Section = ({ result }) => (
           </>
         )}
       </strong>
-    </p>
-  </section>
+    </StyledParagraph>
+  </StyledSection>
 );
 
