@@ -21,6 +21,22 @@ This is field for result, when you click button Przelicz ( number 3 ) the result
 
 ![Description picture](https://github.com/Przemek-Przybylak/Currency---Converter/blob/main/pictures/descriptionPicture.png)
 
+## Technology used in the Shopping-list
+React - open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. ( more about React bellow)
+BEM - The Block, Element, Modifier methodology is a popular naming convention for classes in HTML and CSS. Introduction: (http://getbem.com/introduction/)
+HTML5 - the structure of the document is rendered using html in Living standard. Introduction: (https://en.wikipedia.org/wiki/HTML5)
+ES6+ Features - In javascript I use features introduced in ECMAScript 6, or newer ones. Introduction: (https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning)
+CSS -
+
+alternative box model.
+flex box.
+normalize.
+
+- Babel
+- Webpack
+- Custom hooks
+- Styled components
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
