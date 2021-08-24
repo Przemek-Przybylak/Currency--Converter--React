@@ -1,32 +1,22 @@
-import { useEffect, useState } from "react";
 import { StyledDiv, StyledParagraph } from "./styled";
+import { useCurrentTime, } from "./useCurrentTime";
 
 export const Time = () => {
-    const [actualTime, setActualTime] = useState(new Date());
-
-    useEffect(() => {
-        const setIntervalId = setInterval(() => {
-            setActualTime(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(setIntervalId);
-        };
-    }, [setActualTime]);
+    const time = useCurrentTime();
 
     return (
         <StyledDiv>
-            <StyledParagraph>Dzisiaj jest{" "} 
-                {actualTime.toLocaleString("pl", { 
-                weekday: "long", 
-                day: "numeric",  
-                month: "numeric", 
-                year: "numeric", 
-                hour: "numeric", 
-                minute: "numeric", 
-                second: "numeric" 
+            <StyledParagraph>Dzisiaj jest{" "}
+                {time.toLocaleString("pl", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "numeric",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "numeric",
+                    second: "numeric"
                 })}
-                </StyledParagraph>
+            </StyledParagraph>
         </StyledDiv>
     );
 };
