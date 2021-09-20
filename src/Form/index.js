@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { currencies } from "./currencies";
 import { Section } from "../Section";
 import { Time } from "../Time";
 import { useCurrentData } from "./useCurrentData";
@@ -11,7 +10,9 @@ import {
     StyledLegend,
     StyledSpan,
     StyledInput,
-    StyledButton
+    StyledButton,
+    DivEmpty,
+    P,
 } from "./styled";
 
 export const Form = () => {
@@ -45,22 +46,25 @@ export const Form = () => {
         <StyledForm>
             <StyledDiv>
                 <Time />
-                <StyledFieldset>
-                    {ratesData.state === "loading" ? (
-                        <p>
+                <StyledLegend>Kalkulator walutowy</StyledLegend>
+                {ratesData.state === "loading" ? (
+                    <DivEmpty>
+                        <P>
                             Proszę czekać, trwa pobieranie danych...
-                        </p>
-                    ) : ratesData.state === "error" ? (
-                        <p>
-                            Niestety nie udało się załadować walut<br />
-                            Sprawdz czy masz internet, jeśli masz to spróbuj później!
-                        </p>
-                    ) : (
-                        <>
-                            <StyledLegend>Kalkulator walutowy</StyledLegend>
+                        </P>
+                    </DivEmpty>
+                ) : ratesData.state === "error" ? (
+                    <DivEmpty>
+                        <P>
+                            Niestety nie udało się pobrać kursów walut.<br />
+                            Sprawdź czy masz internet, jeśli tak to spróbuj później!
+                        </P>
+                    </DivEmpty>
+                ) : (
+                    <>
+                        <StyledFieldset>
                             <p>
                                 <StyledLabel>
-                                    {currencies}
                                     <StyledSpan>Podaj kwotę w PLN: </StyledSpan>
                                     <StyledInput
                                         type="number"
@@ -88,11 +92,17 @@ export const Form = () => {
                                     )))};
                                 </StyledInput>
                             </StyledLabel>
-                        </>)}
-                </StyledFieldset>
-                <StyledButton onClick={onFormSubmit}>Przelicz</StyledButton>
-                <StyledButton type="reset" onClick={onClickClear} >Wyczyść formularz</StyledButton>
-                <Section result={result} />
+
+                        </StyledFieldset>
+                        <P
+                            date
+                        >
+                            Kursy walut pobierane z Europejskiego Banku Centralnego dnia: {ratesData.date}
+                        </P>
+                        <StyledButton onClick={onFormSubmit}>Przelicz</StyledButton>
+                        <StyledButton type="reset" onClick={onClickClear} >Wyczyść formularz</StyledButton>
+                        <Section result={result} />
+                    </>)}
             </StyledDiv>
         </StyledForm>
     );
