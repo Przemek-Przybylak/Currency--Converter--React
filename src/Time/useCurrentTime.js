@@ -14,4 +14,4 @@ export const useCurrentTime = () => {
     }, [setcurrentTime]);
 
     return currentTime;
-}
+};
