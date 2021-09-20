@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const StyledForm = styled.form`
     margin: 20px auto;
@@ -9,7 +9,15 @@ export const StyledDiv = styled.div`
     padding: 10px 20px 10px 20px;
     background-color: white;
     border: 1px solid #ccc;
+    opacity: 95%;
 `;
+
+export const DivEmpty = styled(StyledDiv)`
+    height: 234px;
+    max-width: 600px;
+    text-align: center;
+    border: none;
+`
 
 export const StyledLabel = styled.label`
     display: flex;
@@ -20,7 +28,7 @@ export const StyledFieldset = styled.fieldset`
     padding: 15px;
     border: none;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 `;
 
 export const StyledLegend = styled.legend`
@@ -61,4 +69,21 @@ export const StyledButton = styled.button`
     padding: 3px;
     background-color: rgb(4, 164, 228);
     color: white;
+`;
+
+export const P = styled.p`
+    margin: 90px auto;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1,5px;
+    color: rgb(4, 164, 228);
+
+    ${({ date }) => date && css`
+        margin: 2px auto;
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: rgb(172,172,172);
+        text-align: center;
+        `};
 `;
