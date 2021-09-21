@@ -43,7 +43,7 @@ export const Form = () => {
     };
 
     return (
-        <StyledForm>
+        <StyledForm onSubmit={onFormSubmit}>
             <StyledDiv>
                 <Time />
                 <StyledLegend>Kalkulator walutowy</StyledLegend>
@@ -99,7 +99,7 @@ export const Form = () => {
                         >
                             Kursy walut pobierane z Europejskiego Banku Centralnego dnia: {ratesData.date}
                         </P>
-                        <StyledButton onClick={onFormSubmit}>Przelicz</StyledButton>
+                        <StyledButton>Przelicz</StyledButton>
                         <StyledButton type="reset" onClick={onClickClear} >Wyczyść formularz</StyledButton>
                         <Section result={result} />
                     </>)}
