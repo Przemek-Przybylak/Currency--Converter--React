@@ -1,13 +1,9 @@
 # Currency-Converter-React what's it?
+Currency converter is used to convert any currency from European Central Bank to Polish Zloty.
 
 ## Currency Converter is used to quickly convert currencies against Polish Zloty.
 
-link: https://przemek-przybylak.github.io/Currency--Converter--React/
-
-- Euro
-- United States Dollar
-- Swiss Frank
-- Link to the currency-converter: 
+link: https://przemek-przybylak.github.io/Currency--Converter--React/ 
 
 ## How it's working?
 5 elements are marked in the photo below:
