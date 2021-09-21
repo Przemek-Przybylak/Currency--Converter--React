@@ -1,51 +1,51 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
     margin: 20px auto;
     max-width: 600px;
 `;
 
-export const StyledDiv = styled.div`
+export const Div = styled.div`
     padding: 10px 20px 10px 20px;
     background-color: white;
     border: 1px solid #ccc;
     opacity: 95%;
 `;
 
-export const DivEmpty = styled(StyledDiv)`
+export const StateDiv = styled(Div)`
     height: 234px;
     max-width: 600px;
     text-align: center;
     border: none;
-`
+`;
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
     display: flex;
     justify-content: center;
 `;
 
-export const StyledFieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
     padding: 15px;
     border: none;
     width: 100%;
     margin-bottom: 15px;
 `;
 
-export const StyledLegend = styled.legend`
+export const Legend = styled.legend`
     margin: auto;
     background-color: rgb(4, 164, 228);
     color: white;
     font-weight: 700;
 `;
 
-export const StyledSpan = styled.span`
+export const Span = styled.span`
     display: inline-block;
     width: 100%;
     max-width: 200px;
     margin: 5px;
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
     width: 100%;
     max-width: 300px;
     padding: 3px;
@@ -62,7 +62,7 @@ export const StyledInput = styled.input`
     };
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
     margin: 5px auto;
     width: 100%;
     border: none;
@@ -71,7 +71,7 @@ export const StyledButton = styled.button`
     color: white;
 `;
 
-export const P = styled.p`
+export const Paragraph = styled.p`
     margin: 90px auto;
     font-size: 24px;
     font-weight: bold;
@@ -79,11 +79,11 @@ export const P = styled.p`
     color: rgb(4, 164, 228);
 
     ${({ date }) => date && css`
-        margin: 2px auto;
-        font-size: 10px;
-        font-weight: 300;
-        letter-spacing: 1px;
-        color: rgb(172,172,172);
-        text-align: center;
+    margin: 2px auto;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(172,172,172);
+    text-align: center;
         `};
 `;

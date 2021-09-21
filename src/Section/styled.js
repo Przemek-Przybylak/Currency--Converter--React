@@ -11,7 +11,7 @@ export const StyledSection = styled.section`
     padding: 5px;
 `;
 
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
     padding: 0;
     margin: 0;
 `;

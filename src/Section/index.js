@@ -1,8 +1,8 @@
-import { StyledSection, StyledParagraph } from "./styled";
+import { StyledSection, Paragraph } from "./styled";
 
 export const Section = ({ result }) => (
   <StyledSection>
-    <StyledParagraph>
+    <Paragraph>
       <span>Wynik to: </span>
       <strong>
         {result && (
@@ -15,7 +15,7 @@ export const Section = ({ result }) => (
           </>
         )}
       </strong>
-    </StyledParagraph>
+    </Paragraph>
   </StyledSection>
 );
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDiv = styled.div`
+export const Div = styled.div`
     margin: 0px;
     margin-bottom: 10px;
     color: rgb(172, 172, 172);
@@ -8,7 +8,7 @@ export const StyledDiv = styled.div`
     font-size: 10px;
 `;
 
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
     margin: 0px;
     display: flex;
     justify-content: flex-end;

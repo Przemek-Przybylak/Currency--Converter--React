@@ -1,12 +1,12 @@
-import { StyledDiv, StyledParagraph } from "./styled";
+import { Div, Paragraph } from "./styled";
 import { useCurrentTime, } from "./useCurrentTime";
 
 export const Time = () => {
     const time = useCurrentTime();
 
     return (
-        <StyledDiv>
-            <StyledParagraph>Dzisiaj jest{" "}
+        <Div>
+            <Paragraph>Dzisiaj jest{" "}
                 {time.toLocaleString("pl", {
                     weekday: "long",
                     day: "numeric",
@@ -16,7 +16,7 @@ export const Time = () => {
                     minute: "numeric",
                     second: "numeric"
                 })}
-            </StyledParagraph>
-        </StyledDiv>
+            </Paragraph>
+        </Div>
     );
 };

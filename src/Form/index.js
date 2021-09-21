@@ -4,15 +4,15 @@ import { Time } from "../Time";
 import { useCurrentData } from "./useCurrentData";
 import {
     StyledForm,
-    StyledDiv,
-    StyledLabel,
-    StyledFieldset,
-    StyledLegend,
-    StyledSpan,
-    StyledInput,
-    StyledButton,
-    DivEmpty,
-    P,
+    Div,
+    Label,
+    Fieldset,
+    Legend,
+    Span,
+    Input,
+    Button,
+    StateDiv,
+    Paragraph,
 } from "./styled";
 
 export const Form = () => {
@@ -44,29 +44,29 @@ export const Form = () => {
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
-            <StyledDiv>
+            <Div>
                 <Time />
-                <StyledLegend>Kalkulator walutowy</StyledLegend>
+                <Legend>Kalkulator walutowy</Legend>
                 {ratesData.state === "loading" ? (
-                    <DivEmpty>
-                        <P>
+                    <StateDiv>
+                        <Paragraph>
                             Proszę czekać, trwa pobieranie danych...
-                        </P>
-                    </DivEmpty>
+                        </Paragraph>
+                    </StateDiv>
                 ) : ratesData.state === "error" ? (
-                    <DivEmpty>
-                        <P>
+                    <StateDiv>
+                        <Paragraph>
                             Niestety nie udało się pobrać kursów walut.<br />
                             Sprawdź czy masz internet, jeśli tak to spróbuj później!
-                        </P>
-                    </DivEmpty>
+                        </Paragraph>
+                    </StateDiv>
                 ) : (
                     <>
-                        <StyledFieldset>
+                        <Fieldset>
                             <p>
-                                <StyledLabel>
-                                    <StyledSpan>Podaj kwotę w PLN: </StyledSpan>
-                                    <StyledInput
+                                <Label>
+                                    <Span>Podaj kwotę w PLN: </Span>
+                                    <Input
                                         type="number"
                                         min="1" step="1"
                                         placeholder="Wpisz kwotę..."
@@ -74,11 +74,11 @@ export const Form = () => {
                                         value={amount}
                                         onChange={({ target }) => setAmount(target.value)}
                                     />
-                                </StyledLabel>
+                                </Label>
                             </p>
-                            <StyledLabel>
-                                <StyledSpan>Wybierz walutę</StyledSpan>
-                                <StyledInput as="select"
+                            <Label>
+                                <Span>Wybierz walutę</Span>
+                                <Input as="select"
                                     value={currency}
                                     onChange={({ target }) => setCurrency(target.value)}
                                 >
@@ -90,20 +90,19 @@ export const Form = () => {
                                             {currency}
                                         </option>
                                     )))};
-                                </StyledInput>
-                            </StyledLabel>
-
-                        </StyledFieldset>
-                        <P
+                                </Input>
+                            </Label>
+                        </Fieldset>
+                        <Paragraph
                             date
                         >
                             Kursy walut pobierane z Europejskiego Banku Centralnego dnia: {ratesData.date}
-                        </P>
-                        <StyledButton>Przelicz</StyledButton>
-                        <StyledButton type="reset" onClick={onClickClear} >Wyczyść formularz</StyledButton>
+                        </Paragraph>
+                        <Button>Przelicz</Button>
+                        <Button type="reset" onClick={onClickClear} >Wyczyść formularz</Button>
                         <Section result={result} />
                     </>)}
-            </StyledDiv>
+            </Div>
         </StyledForm>
     );
 };
